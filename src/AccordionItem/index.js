@@ -74,10 +74,6 @@ export default class AccordionItem extends Component {
     const bodyNode = ReactDOM.findDOMNode(this.refs.body);
     const images = bodyNode.querySelectorAll('img');
 
-    if (images.length > 0) {
-      return this.preloadImages(bodyNode, images);
-    }
-
     this.setState({
       maxHeight: expanded || collapse ? bodyNode.scrollHeight + 'px' : 0,
       overflow: 'hidden'
